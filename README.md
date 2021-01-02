@@ -11,10 +11,12 @@ Usar el comando ```make```
 
 # Instrucciones de uso
 
-Para ejecutar el programa debe compilarse con el comando del punto anterior, la instancia a ocupar debe tener el formato ```<NOMBRE>.txt``` y estar dentro de directorio ```Instancias``` que se encunetra en la raiz del proyecto  
+Para ejecutar el programa debe compilarse con el comando del punto anterior, la instancia a ocupar debe tener el formato ```<NOMBRE>.txt``` y estar dentro del directorio ```Instancias``` que se encunetra en la raiz del proyecto.  
 
-Para ejecutar el programa realizamos ```make run file='<NOMBRE>'```, con la instancia debidamente en la carpeta mencionada.  
+Para ejecutar el programa realizamos ```make run file='<NOMBRE>'```, con la instancia debidamente ubicada en la carpeta mencionada.  
 
 Para limpiar el directorio de los ejecutables se utiliza ```make clean```.  
 
-Los resultados del programa se encuentran en el directorio ```Resultados``` ubicado en la raíz del proyecto.
+Los resultados del programa se encuentran en el directorio ```Resultados``` ubicado en la raíz del proyecto.  
+
+Para salir del programa en cualquier momento se realiza ```ctrl + c``` durante su ejecución.
