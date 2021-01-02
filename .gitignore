@@ -1,3 +1,4 @@
 ./Resultados
 .vscode
 *.o
+*.out
