@@ -308,7 +308,7 @@ int main(int argc, char *argv[]) {
     // Abrir el archivo
     time_t start, end;
     time(&start);
-    //std::ios_base::sync_with_stdio(false);
+    std::ios_base::sync_with_stdio(false);
     std::string filename = argv[1];
     std::ifstream file(filename);
     
@@ -697,7 +697,7 @@ int main(int argc, char *argv[]) {
                 for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }
             jump++;
-            FC[5] = 1; FC[4] = 0; FC[3] = 0; FC[2] = 0; FC[1] = 0; FC[0] = 0;
+            FC[5] = 1; FC[4] = 1; FC[3] = 0; FC[2] = 0; FC[1] = 0; FC[0] = 0;
         }
 
         if (jump == 1 && Moves_5.size() > 0) {
@@ -718,7 +718,7 @@ int main(int argc, char *argv[]) {
                 for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }
             jump++;
-            FC[5] = 1; FC[4] = 1; FC[3] = 0; FC[2] = 0; FC[1] = 0; FC[0] = 0;
+            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 0; FC[1] = 0; FC[0] = 0;
         }
 
         if (jump == 2 && Moves_4.size() > 0) {
@@ -744,7 +744,7 @@ int main(int argc, char *argv[]) {
                 for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }
             jump++;
-            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 0; FC[1] = 0; FC[0] = 0;
+            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 0; FC[0] = 0;
         }
 
         if (jump == 3 && Moves_3.size() > 0) {
@@ -775,7 +775,7 @@ int main(int argc, char *argv[]) {
                 for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }            
             jump++;
-            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 0; FC[0] = 0;
+            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 1; FC[0] = 0;
         }
 
         if (jump == 4 && Moves_2.size() > 0) {
@@ -811,7 +811,7 @@ int main(int argc, char *argv[]) {
                 for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }            
             jump++;
-            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 1; FC[0] = 0;
+            FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 1; FC[0] = 1;
         }
 
         if (jump == 5 && Moves_1.size() > 0) {
@@ -827,29 +827,29 @@ int main(int argc, char *argv[]) {
         if (jump == 5) {
             for (int truck = 0; truck < k; truck++){
                 for (int i = 1; i < N+1; i++){
-                    for (int j = 1; j < N+1; j++) Saltos[truck][i][j] = false;
+                    for (int j = 1; j < N+1; j++) {Saltos[truck][i][j] = false; Variables[truck][i][j] = false;}
                 }
             }
             for (int truck = 0; truck < k; truck++){
                 for (int i = 1; i < N+1; i++){
-                    for (int j = N+1; j < n; j++) Saltos[truck][i][j] = false;
+                    for (int j = N+1; j < n; j++) {Saltos[truck][i][j] = false; Variables[truck][i][j] = false;}
                 }
             }
             for (int truck = 0; truck < k; truck++){
                 for (int i = N+1; i < n; i++){
-                    for (int j = N+1; j < n; j++) Saltos[truck][i][j] = false;
+                    for (int j = N+1; j < n; j++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
                 }
             }
             for (int truck = 0; truck < k; truck++){
-                for (int i = N+1; i < n; i++) Saltos[truck][i][0] = false;
+                for (int i = N+1; i < n; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }
             for (int truck = 0; truck < k; truck++){
-                for (int i = 1; i < N+1; i++) Saltos[truck][i][0] = false;
+                for (int i = 1; i < N+1; i++) {Saltos[truck][i][0] = false; Variables[truck][i][0] = false;}
             }
             FC[5] = 1; FC[4] = 1; FC[3] = 1; FC[2] = 1; FC[1] = 1; FC[0] = 1;
             //std::cout << "Finalización" << std::endl;
             jump=0; ciclos++;
-            if (ciclos > k) break;
+            if (ciclos > N+1) break;
         }
         
         //std::cout << "--- Fin Backjumping ---" << std::endl;
