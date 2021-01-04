@@ -11,7 +11,7 @@ Usar el comando ```make```
 
 # Instrucciones de uso
 
-Para ejecutar el programa debe compilarse con el comando del punto anterior, la instancia a ocupar debe tener el formato ```<NOMBRE>.txt``` y estar dentro del directorio ```Instancias``` que se encunetra en la raiz del proyecto.  
+Para ejecutar el programa debe compilarse con el comando del punto anterior, la instancia a ocupar debe tener el formato ```<NOMBRE>.txt``` y estar dentro del directorio ```Instancias``` que se encuentra en la raiz del proyecto.  
 
 Para ejecutar el programa realizamos ```make run file='<NOMBRE>'```, con la instancia debidamente ubicada en la carpeta mencionada. Ejemplo ```make run file='GF4'``` . 
 
