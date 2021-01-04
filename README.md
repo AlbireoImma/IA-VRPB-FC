@@ -19,6 +19,8 @@ Para obtener el tiempo de ejecución utilizar ```time make run file='instancia'`
 
 Para limpiar el directorio de los ejecutables se utiliza ```make clean```.  
 
-Los resultados del programa se encuentran en el directorio ```Resultados``` ubicado en la raíz del proyecto.  
+Los resultados del programa se encuentran en el directorio ```Resultados``` ubicado en la raíz del proyecto, en donde los resultados se crearán de la manera ```<NOMBRE>.out```.
+
+Para revisar archivos respecto a el informe, revisar el directorio ```Informe```.
 
 Para salir del programa en cualquier momento se realiza ```ctrl + c``` durante su ejecución.
